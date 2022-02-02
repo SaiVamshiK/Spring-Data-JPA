@@ -51,4 +51,10 @@ class StudentRepositoryTest {
         System.out.println("students = " + students);
     }
 
+    @Test
+    public void getStudentStartingWithGuardName(){
+        List<Student> students = studentRepository.findByGuardianNameStartingWith("vi");
+        System.out.println("students = " + students);
+    }
+
 }
