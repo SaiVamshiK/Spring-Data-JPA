@@ -74,6 +74,12 @@ class StudentRepositoryTest {
         List<Student> student = studentRepository.findByEmailIdCustom("rohit@gmail.com");
         System.out.println("student = " + student);
     }
+
+    @Test
+    public void getFNameByEmail(){
+        String Fname = studentRepository.getFNameByEmail("rohit@gmail.com");
+        System.out.println("Fname = " + Fname);
+    }
 }
 
 
