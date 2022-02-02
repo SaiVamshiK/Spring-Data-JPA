@@ -15,4 +15,6 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
     Student findByFirstNameAndLastName(String firstName,String lastName);
     @Query(value = "select * from tbl_student order by first_name",nativeQuery = true)
     List<Student> findStudentsSortedName();
+    @Query(value = "select * from tbl_student where email_id = ?1",nativeQuery = true)
+    List<Student> findByEmailIdCustom(String email);
 }

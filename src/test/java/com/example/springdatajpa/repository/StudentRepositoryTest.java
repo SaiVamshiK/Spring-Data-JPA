@@ -69,6 +69,11 @@ class StudentRepositoryTest {
         System.out.println("students = " + students);
     }
 
+    @Test
+    public void getStudentByEmail(){
+        List<Student> student = studentRepository.findByEmailIdCustom("rohit@gmail.com");
+        System.out.println("student = " + student);
+    }
 }
 
 
