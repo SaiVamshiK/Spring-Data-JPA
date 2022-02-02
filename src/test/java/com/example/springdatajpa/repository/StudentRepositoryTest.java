@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -14,13 +16,19 @@ class StudentRepositoryTest {
     @Test
     public void add(){
         Student student = Student.builder()
-                .emailId("sai@gmail.com")
-                .firstName("sai")
-                .lastName("vamshi")
-                .guardianEmail("rahul@gmail.com")
+                .emailId("dhoni@gmail.com")
+                .firstName("dhoni")
+                .lastName("ms")
+                .guardianEmail("virat@gmail.com")
                 .guardianMobile("8483484844")
-                .guardianName("rahul")
+                .guardianName("virat")
                 .build();
         studentRepository.save(student);
+    }
+    
+    @Test
+    public void printAllStudents(){
+        List<Student> students = studentRepository.findAll();
+        System.out.println("students = " + students);
     }
 }
