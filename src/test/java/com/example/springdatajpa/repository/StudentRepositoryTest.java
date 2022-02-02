@@ -92,6 +92,11 @@ class StudentRepositoryTest {
         List<Student> students = studentRepository.getByFnameEmailNative("dhoni","dhoni@gmail.com");
         System.out.println("students = " + students);
     }
+
+    @Test
+    public void updateStudentEmailGivenFname(){
+        studentRepository.updateStudentEmailGivenFname("dhoni");
+    }
 }
 
 
