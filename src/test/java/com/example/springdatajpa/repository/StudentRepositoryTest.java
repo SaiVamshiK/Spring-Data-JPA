@@ -31,4 +31,6 @@ class StudentRepositoryTest {
         List<Student> students = studentRepository.findAll();
         System.out.println("students = " + students);
     }
+
+
 }

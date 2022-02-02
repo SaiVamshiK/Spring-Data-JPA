@@ -38,14 +38,8 @@ public class Student {
     )
     private String emailId;
 
-    @Column(name = "guardianName")
-    private String guardianName;
-
-    @Column(name = "guardianEmail")
-    private String guardianEmail;
-
-    @Column(name = "guardianMobile")
-    private String guardianMobile;
+    @Embedded
+    private Guardian guardian;
 }
 
 // @Table makes the table name as the same as we defined, in the MySql DB
