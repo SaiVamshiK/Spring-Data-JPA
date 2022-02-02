@@ -57,4 +57,10 @@ class StudentRepositoryTest {
         System.out.println("students = " + students);
     }
 
+    @Test
+    public void getStudentByFNameLName(){
+        Student student = studentRepository.findByFirstNameAndLastName("dhoni","ms");
+        System.out.println("Student:"+student);
+    }
+
 }

@@ -8,7 +8,8 @@ import java.util.List;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student,Long> {
-    public List<Student> findByFirstName(String firstName);
-    public List<Student> findByEmailIdEndingWith(String endingEmail);
-    public List<Student> findByGuardianNameStartingWith(String name);
+    List<Student> findByFirstName(String firstName);
+    List<Student> findByEmailIdEndingWith(String endingEmail);
+    List<Student> findByGuardianNameStartingWith(String name);
+    Student findByFirstNameAndLastName(String firstName,String lastName);
 }
