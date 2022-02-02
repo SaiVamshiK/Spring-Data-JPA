@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Table;
 
 @Embeddable
 @Data
@@ -14,12 +15,12 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @Builder
 public class Guardian {
-    @Column(name = "Name")
+    @Column(name = "guardianName")
     private String name;
 
-    @Column(name = "Email")
+    @Column(name = "guardianEmail")
     private String email;
 
-    @Column(name = "Mobile")
+    @Column(name = "guardianMobile")
     private String mobile;
 }
