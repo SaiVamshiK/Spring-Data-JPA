@@ -45,4 +45,10 @@ class StudentRepositoryTest {
         System.out.println("students = " + students);
     }
 
+    @Test
+    public void getStudentEndingWithEmail(){
+        List<Student> students = studentRepository.findByEmailIdEndingWith("coum");
+        System.out.println("students = " + students);
+    }
+
 }
