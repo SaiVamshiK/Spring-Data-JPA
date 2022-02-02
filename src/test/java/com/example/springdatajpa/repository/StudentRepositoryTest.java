@@ -17,14 +17,14 @@ class StudentRepositoryTest {
     @Test
     public void add(){
         Guardian guardian = Guardian.builder()
-                .email("virat@gmail.com")
-                .mobile("8483484844")
-                .name("virat")
+                .email("kl@gmail.com")
+                .mobile("8483324844")
+                .name("kl")
                 .build();
         Student student = Student.builder()
-                .emailId("dhoni@gmail.com")
-                .firstName("dhoni")
-                .lastName("ms")
+                .emailId("rohit@gmail.com")
+                .firstName("rohit")
+                .lastName("sharma")
                 .guardian(guardian)
 //                .guardianEmail("virat@gmail.com")
 //                .guardianMobile("8483484844")
@@ -39,5 +39,10 @@ class StudentRepositoryTest {
         System.out.println("students = " + students);
     }
 
+    @Test
+    public void getStudentByName(){
+        List<Student> students =studentRepository.findByFirstName("dhoni");
+        System.out.println("students = " + students);
+    }
 
 }
