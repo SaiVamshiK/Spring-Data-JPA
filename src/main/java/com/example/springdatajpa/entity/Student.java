@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Table(
-        name = "tbl_student",
+        name = "tblStudent",
         uniqueConstraints = @UniqueConstraint(
                 name = "emailId_unique",
                 columnNames = "emailId"
