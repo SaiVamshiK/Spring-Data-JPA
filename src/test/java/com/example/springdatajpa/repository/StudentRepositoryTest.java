@@ -80,6 +80,12 @@ class StudentRepositoryTest {
         String Fname = studentRepository.getFNameByEmail("rohit@gmail.com");
         System.out.println("Fname = " + Fname);
     }
+
+    @Test
+    public void getByFnameEmail(){
+        List<Student> students = studentRepository.getByFnameEmail("dhoni","dhoni@gmail.com");
+        System.out.println("students = " + students);
+    }
 }
 
 
