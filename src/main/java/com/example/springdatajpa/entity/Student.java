@@ -5,32 +5,45 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "tbl_student")
+@Table(
+        name = "tbl_student",
+        uniqueConstraints = @UniqueConstraint(
+                name = "emailId_unique",
+                columnNames = "emailId"
+        )
+)
 public class Student {
     // whatever we do in the student class will be reflected in the database because of spring.jpa.hibernate.ddl-auto=update
     @Id
     @Column(name = "studentID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long studentId;
+
     @Column(name = "firstName")
     private String firstName;
+
     @Column(name = "lastName")
     private String lastName;
-    @Column(name = "emailId")
+
+    @Column(
+            name = "emailId",
+            nullable = false
+    )
     private String emailId;
+
     @Column(name = "guardianName")
     private String guardianName;
+
     @Column(name = "guardianEmail")
     private String guardianEmail;
+
     @Column(name = "guardianMobile")
     private String guardianMobile;
 }
