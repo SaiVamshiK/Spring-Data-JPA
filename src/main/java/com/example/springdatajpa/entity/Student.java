@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 @Data
@@ -14,6 +15,7 @@ import javax.persistence.Entity;
 @Builder
 public class Student {
     // whatever we do in the student class will be reflected in the database because of spring.jpa.hibernate.ddl-auto=update
+    @Id
     private Long studentId;
     private String firstName;
     private String lastName;
