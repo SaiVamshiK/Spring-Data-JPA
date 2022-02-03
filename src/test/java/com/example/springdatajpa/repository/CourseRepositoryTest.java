@@ -20,5 +20,5 @@ class CourseRepositoryTest {
         List<Course> courseList = courseRepository.findAll();
         System.out.println("courseList = " + courseList);
     }
-    
+
 }
