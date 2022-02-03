@@ -1,9 +1,6 @@
 package com.example.springdatajpa.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @ToString
+@Builder
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
