@@ -17,4 +17,11 @@ public class CourseMaterial {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long courseMaterialId;
     private String url;
+
+    @OneToOne
+    @JoinColumn(
+            name = "course_id",
+            referencedColumnName = "courseId"
+    )
+    private Course course;
 }
