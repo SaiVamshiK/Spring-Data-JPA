@@ -13,5 +13,7 @@ import javax.persistence.Entity;
 @Data
 @Builder
 public class Course {
-
+    private Long courseId;
+    private String title;
+    private Integer credits;
 }

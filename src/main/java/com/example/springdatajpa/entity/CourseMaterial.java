@@ -13,4 +13,6 @@ import javax.persistence.Entity;
 @Data
 @Builder
 public class CourseMaterial {
+    private Long courseMaterialId;
+    private String url;
 }
