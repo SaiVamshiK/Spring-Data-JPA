@@ -17,14 +17,18 @@ class TeacherRepositoryTest {
 
     @Test
     public void addTeacher(){
-        Course course = Course.builder()
-                .title("DBMS")
+        Course course1 = Course.builder()
+                .title("DLCA")
+                .credits(3)
+                .build();
+        Course course2 = Course.builder()
+                .title("Java")
                 .credits(3)
                 .build();
         Teacher teacher = Teacher.builder()
-                .firstName("Rohit")
-                .lastName("Sharma")
-                .courseList(List.of(course))
+                .firstName("Virat")
+                .lastName("Kohli")
+                .courseList(List.of(course1,course2))
                 .build();
         teacherRepository.save(teacher);
     }
