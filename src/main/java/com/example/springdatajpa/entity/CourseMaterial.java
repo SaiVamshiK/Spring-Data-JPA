@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -13,6 +13,8 @@ import javax.persistence.Entity;
 @Data
 @Builder
 public class CourseMaterial {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long courseMaterialId;
     private String url;
 }
