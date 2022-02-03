@@ -22,7 +22,7 @@ class CourseMaterialRepositoryTest {
                 .build();
         CourseMaterial courseMaterial = CourseMaterial.builder()
                 .url("www.yahoo.com")
-                .course(course)
+                //.course(course)
                 .build();
         courseMaterialRepository.save(courseMaterial);
     }
